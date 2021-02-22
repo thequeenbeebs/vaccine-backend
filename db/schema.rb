@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_22_215212) do
+ActiveRecord::Schema.define(version: 2021_02_22_223323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_215212) do
   create_table "appointments", force: :cascade do |t|
     t.integer "patient_id"
     t.integer "vaccination_center_id"
+    t.integer "vaccine_id"
     t.datetime "appointment_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -44,11 +45,14 @@ ActiveRecord::Schema.define(version: 2021_02_22_215212) do
     t.string "address"
     t.string "phone_number"
     t.text "days_open", default: [], array: true
-    t.datetime "opening_time"
-    t.datetime "closing_time"
+    t.integer "opening_hour"
+    t.integer "closing_hour"
     t.integer "appointments_per_hour"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
   end
 
   create_table "vaccines", force: :cascade do |t|
