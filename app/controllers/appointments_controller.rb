@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
     def create
         appointment = Appointment.create(appointment_params)
-        render json: appointment.to_json
+        render json: appointment.to_json(:include => :vaccination_center)
     end
 
     def destroy
