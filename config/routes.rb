@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # get '/patients/:id', to: "patients#show"
 
   post '/appointments', to: "appointments#create"
+  patch '/appointments/:id', to: "appointments#update"
   delete '/appointments/:id', to: "appointments#destroy"
 end

@@ -4,6 +4,12 @@ class AppointmentsController < ApplicationController
         render json: appointment.to_json(:include => :vaccination_center)
     end
 
+    def update
+        appointment = Appointment.find(params[:id])
+        appointment.update(appointment_params)
+        render json: appointment.to_json(:include => :vaccination_center)
+    end
+
     def destroy
         appointment = Appointment.find(params[:id])
         appointment.delete
