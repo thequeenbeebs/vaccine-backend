@@ -3,7 +3,7 @@ class PatientsController < ApplicationController
         patients = Patient.all
         render json: patients.to_json(:include => {
             :appointments => {:only => [:appointment_time, :id], :include => {
-                :vaccination_center => {:only => [:name, :address, :phone_number, :city, :state, :zip_code, :coordinates]}
+                :vaccination_center => {:only => [:name, :address, :phone_number, :city, :state, :zip_code, :coordinates, :days_closed]}
             }}
         })
     end
