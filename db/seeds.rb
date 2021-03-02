@@ -13,11 +13,11 @@ Patient.destroy_all
 Vaccine.destroy_all
 VaccinationCenter.destroy_all
 
-blaire = Patient.create(first_name: "Blaire", last_name: "Baker", email: "bakerblaire@gmail.com", phone_number: "281-630-8839")
-dane = Patient.create(first_name: "Dane", last_name: "Dawson", email: "dane@dane.com", phone_number: "111-867-5309")
-raul = Patient.create(first_name: "Raul", last_name: "Sanchez", email: "raul@raul.com", phone_number: "123-456-7890")
-angelo = Patient.create(first_name: "Angelo", last_name: "Xenakis", email: "angelo@angelo.com", phone_number: "713-111-2222")
-adam = Patient.create(first_name: "Adam", last_name: "Johnson", email: "adam@adam.com", phone_number: "832-987-6543")
+blaire = Patient.create(password: "blaire", first_name: "Blaire", last_name: "Baker", email: "bakerblaire@gmail.com", phone_number: "281-630-8839")
+dane = Patient.create(password: "dane", first_name: "Dane", last_name: "Dawson", email: "dane@dane.com", phone_number: "111-867-5309")
+raul = Patient.create(password: "raul", first_name: "Raul", last_name: "Sanchez", email: "raul@raul.com", phone_number: "123-456-7890")
+angelo = Patient.create(password: "angelo", first_name: "Angelo", last_name: "Xenakis", email: "angelo@angelo.com", phone_number: "713-111-2222")
+adam = Patient.create(password: "adam", first_name: "Adam", last_name: "Johnson", email: "adam@adam.com", phone_number: "832-987-6543")
 
 methodist = VaccinationCenter.create(name: "Houston Methodist Hospital", address: "6565 Fannin Street", city: "Houston", state: "Texas", zip_code: "77030", phone_number: "281-626-5551", days_closed: [], opening_hour: 8, closing_hour: 18, appointments_per_hour: 25, coordinates: [-95.39971177387433, 29.7100756146111])
 luke = VaccinationCenter.create(name: "CHI St. Luke's Health", address: "6720 Bertner Ave", city: "Houston", state: "Texas", zip_code: "77030", phone_number: "832-844-6352", days_closed: [], opening_hour: 8, closing_hour: 19, appointments_per_hour: 20, coordinates: [-95.40061167387442, 29.707873418290546])

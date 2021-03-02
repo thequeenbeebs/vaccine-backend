@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   post '/appointments', to: "appointments#create"
   patch '/appointments/:id', to: "appointments#update"
   delete '/appointments/:id', to: "appointments#destroy"
+
+  post '/login', to: "auth#create"
+  get '/decode_token', to: "patients#profile"
 end
