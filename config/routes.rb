@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   post '/login', to: "auth#create"
   get '/decode_token', to: "patients#profile"
+
+  get '/vaccines', to: "vaccines#index"
 end

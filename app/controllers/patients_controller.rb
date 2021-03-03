@@ -39,7 +39,7 @@ class PatientsController < ApplicationController
                 }}
             }), token: token}
         else
-            render json: {error_message: "not valid"}
+            render json: {error_message: "E-Mail Address Must Be Unique"}
         end
     end
 
