@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
     def create
         appointment = Appointment.create(appointment_params)
+        # byebug 
         render json: appointment.to_json(:include => :vaccination_center)
     end
 
@@ -18,6 +19,6 @@ class AppointmentsController < ApplicationController
     private
 
     def appointment_params
-        params.require(:appointment).permit(:appointment_time, :patient_id, :vaccination_center_id, :vaccine_id)
+        params.require(:appointment).permit(:appointment_time, :patient_id, :vaccination_center_id)
     end
 end
