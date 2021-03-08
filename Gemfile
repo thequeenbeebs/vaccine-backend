@@ -40,3 +40,5 @@ gem "jwt", "~> 2.2"
 gem "faker", "~> 2.16"
 
 gem "active_model_serializers", "~> 0.10.12"
+
+gem "rspec"
